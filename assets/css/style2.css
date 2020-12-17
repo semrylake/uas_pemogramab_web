@@ -1,0 +1,215 @@
+body {
+  font-family: "Arial", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+.container {
+  width: 900px;
+  margin: 20px auto;
+  border: 5px solid white;
+  overflow: auto;
+}
+
+.header {
+  background: linear-gradient(to right, #080808 0, #333636 60%, #858a86 100%);
+  width: 100%;
+  color: white;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  min-height: 70px;
+  border-bottom: 5px solid#333636;
+  text-align: center;
+}
+.header h1 {
+  color: #eee;
+  font-size: 4vw;
+}
+.header ul {
+  padding: 0;
+}
+.header ul li {
+  display: inline-block;
+}
+.header ul li a {
+  font-size: 2vw;
+  padding: 10px 10px;
+  text-decoration: none;
+  color: white;
+}
+.header ul li a:hover {
+  color: tomato;
+}
+
+.showcase {
+  min-height: 400px;
+  background: linear-gradient(
+      to bottom,
+      rgba(22, 22, 22, 0.3) 0,
+      rgba(22, 22, 22, 0.7) 75%,
+      #161616 100%
+    ),
+    url(../img/mts.jpg);
+  background-size: cover;
+  text-align: center;
+  color: tomato;
+  padding-top: 100px;
+  padding-bottom: 30px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+}
+.showcase h4 {
+  color: white;
+  font-size: 2vw;
+  padding: 0;
+}
+.showcase p {
+  color: white;
+  font-size: 2vw;
+}
+.showcase img {
+  width: 18vw;
+  height: 18vw;
+  border: 7px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50% !important;
+}
+.galeri {
+  background-color: #858a86;
+  text-align: center;
+  padding: 20px;
+}
+.galeri h2 {
+  padding-top: 30px;
+  color: white;
+  font-size: 2vw;
+}
+.det {
+  width: 290px;
+  display: inline-block;
+  position: relative;
+}
+
+.gMini {
+  display: inline;
+  max-width: 100%;
+  border: 2px solid white;
+  box-sizing: border-box;
+}
+.gMini:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.konten {
+  min-height: 400px;
+  width: 100%;
+}
+.konten .stori h2 {
+  text-align: center;
+  font-size: 2vw;
+}
+.konten .biodata h2 {
+  text-align: center;
+  font-size: 2vw;
+}
+.konten .stori {
+  width: 60%;
+  box-sizing: border-box;
+  float: left;
+  padding: 20px;
+}
+.konten .stori p {
+  font-size: 1.5vw;
+}
+.konten .biodata {
+  width: 40%;
+  float: right;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: -40px;
+}
+.biodata li {
+  display: inline;
+}
+.biodata ul li p {
+  font-size: 1.5vw;
+}
+
+.contact {
+  background: #333636;
+  text-align: center;
+  margin-top: -30px;
+}
+.contact h2 {
+  padding-top: 30px;
+  color: white;
+}
+.contact ul {
+  padding: 0;
+}
+.contact ul li {
+  display: inline-block;
+  padding: 20px 90px;
+}
+.contact ul li img {
+  width: 60px;
+  height: 60px;
+}
+.contact ul li p {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+}
+.contact ul li a {
+  text-decoration: none;
+}
+.contact ul li a p:hover {
+  color: tomato;
+}
+.footer {
+  min-height: 40px;
+  background: linear-gradient(to right, #080808 0, #333636 60%, #858a86 100%);
+  margin-top: -20px;
+  padding: 20px;
+  text-align: center;
+}
+.footer p {
+  color: white;
+  padding: 20px 0;
+  font-size: 15px;
+}
+@media (max-width: 768px) {
+  .header h1,
+  .header ul,
+  .header ul li,
+  .det,
+  .container,
+  .galeri h2 {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+  .det .gMini {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0, 0, 0, 5px;
+  }
+}
+
+/*clearfix*/
+.cf:before,
+.cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}

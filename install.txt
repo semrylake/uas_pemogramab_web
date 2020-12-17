@@ -1,0 +1,11 @@
+Nama : Jufento Semri Lake
+NIM : 23117027
+
+1. Buat database dengan nama 'wisataweb', lalu import file sonawisata.sql.
+2. Pada halaman home berisi informasi tentang berbagai tempat wisata.
+3. Pengguna dapat membuat artikel dengan mengisi form pembuatan artikel
+   yang ada pada halaman 'buat artikel'
+4. Setelah membuat artikel dan mengirimnya, data tidak akan ditampilkan secara langsung,
+   data akan menunggu persetujuan/approved oleh admin terlebih dahulu.
+5. Untuk Admin bisa mengakses url http://localhost/utsweb2/su agar mengakses halaman Admin.
+6. Admin dapat Login menggunakan username = 'semry' & password = '12345'
