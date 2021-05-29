@@ -31,11 +31,11 @@
                         </a>
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                            <a class="dropdown-item" href="regis.php">
+                            <a class="dropdown-item" href="http://localhost/utsweb2/su/regis.php">
                                 <i class="fas fa-plus fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Tambah User
                             </a>
-                            <a class="dropdown-item" href="changePass.php">
+                            <a class="dropdown-item" href="http://localhost/utsweb2/su/changePass.php">
                                 <i class="fas fa-key fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Ganti Password
                             </a>

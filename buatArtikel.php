@@ -59,9 +59,9 @@ if (isset($_POST["saveArtikel"])) {
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#">Buat Artikel</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="index.html">About</a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -88,7 +88,8 @@ if (isset($_POST["saveArtikel"])) {
                             </div>
                             <div class="form-group">
                                 <label for="foto">Foto</label><br>
-                                <input type="file" name="foto" id="foto" required=""></div>
+                                <input type="file" name="foto" id="foto" required="">
+                            </div>
                             <div class="form-group">
                                 <label for="isiArtikel">Isi Artikel</label><br>
                                 <textarea name="isiArtikel" id="isiArtikel" rows="10" cols="100" required autocomplete="off"></textarea>

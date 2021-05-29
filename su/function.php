@@ -187,3 +187,58 @@ function searchArt($aa)
         ";
     return data($cari);
 }
+
+function daftar($d)
+{
+    global $knk;
+    $lvlUS = "admin";
+    $nama = htmlspecialchars($d['username']);
+    $user = strtolower(stripslashes($d["username"]));
+    $pass = mysqli_real_escape_string($knk, $d["password1"]);
+    $pass2 = mysqli_real_escape_string($knk, $d["password2"]);
+    $ambil = mysqli_query($knk, "SELECT username FROM users WHERE username = '$user'");
+    if (mysqli_fetch_assoc($ambil)) {
+        echo "<script>
+                    alert('Username Telah Digunakan');
+                    </script>";
+        return false;
+    }
+
+    if ($pass !== $pass2) {
+        echo "<script>
+                    alert('Password tidak sesuai');
+                    </script>";
+        return false;
+    }
+    $pass = password_hash($pass, PASSWORD_DEFAULT);
+    $query = "INSERT INTO users VALUES('','$lvlUS','$user','$pass')";
+    mysqli_query($knk, $query);
+    return mysqli_affected_rows($knk);
+}
+
+
+function changeProfile($d)
+{
+    global $knk;
+    $user = strtolower(stripslashes($d["username"]));
+    $pass = mysqli_real_escape_string($knk, $d["password1"]);
+    $pass2 = mysqli_real_escape_string($knk, $d["password2"]);
+    $ambil = mysqli_query($knk, "SELECT username FROM users WHERE username = '$user'");
+    if (mysqli_fetch_assoc($ambil) <= 0) {
+        echo "<script>
+                    alert('Username Tidak Terdaftar');
+                    </script>";
+        return false;
+    }
+
+    if ($pass !== $pass2) {
+        echo "<script>
+                    alert('Password tidak sesuai');
+                    </script>";
+        return false;
+    }
+    $pass = password_hash($pass, PASSWORD_DEFAULT);
+    $sql = "UPDATE users SET password = '$pass' WHERE username = '$user'";
+    mysqli_query($knk, $sql);
+    return mysqli_affected_rows($knk);
+}

@@ -1,15 +1,15 @@
-<?php 
+<?php
 
 require 'function.php';
 
 
 if (isset($_POST["regis"])) {
-  if (daftar($_POST) > 0 ) {
+  if (daftar($_POST) > 0) {
     echo "<script>
         alert('Pengguna Terdaftar');
         document.location.href = 'index.php';
         </script>";
-  }else{
+  } else {
     echo mysqli_error($knk);
   }
 }
@@ -17,6 +17,7 @@ if (isset($_POST["regis"])) {
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -35,68 +36,62 @@ if (isset($_POST["regis"])) {
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
+
 <body class="hold-transition login-page">
-<div class="login-box">
-  <!-- /.login-logo -->
-  <div class="card">
-    <div class="card-body login-card-body">
-      <p class="login-box-msg"></p>
+  <div class="login-box">
+    <!-- /.login-logo -->
+    <div class="card">
+      <div class="card-body login-card-body">
+        <p class="login-box-msg"></p>
 
-      <form action="" method="post">
-        <div class="form-group">
-          <div class="form-label-group">
-            <select class="form-control form-control-sm" name="level" id="level" required>
-              <option id="level" value="admin">Admin</option>
-              <option id="level" value="operator">Operator</option>
-            </select>
-          </div>
-        </div>
-        <div class="input-group mb-3">
-          <input name="username" id="username" type="text" required autocomplete="off" class="form-control" placeholder="Username">
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-user"></span>
+        <form action="" method="post">
+          <div class="input-group mb-3">
+            <input name="username" id="username" type="text" required autocomplete="off" class="form-control" placeholder="Username">
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <span class="fas fa-user"></span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="input-group mb-3">
-          <input name="password1" id="password1" type="password" required autocomplete="off" class="form-control" placeholder="Password">
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-lock"></span>
+          <div class="input-group mb-3">
+            <input name="password1" id="password1" type="password" required autocomplete="off" class="form-control" placeholder="Password">
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <span class="fas fa-lock"></span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="input-group mb-3">
-          <input name="password2" id="password2" type="password" required autocomplete="off" class="form-control" placeholder="Konfirmasi Password">
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-lock"></span>
+          <div class="input-group mb-3">
+            <input name="password2" id="password2" type="password" required autocomplete="off" class="form-control" placeholder="Konfirmasi Password">
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <span class="fas fa-lock"></span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-6">
+          <div class="row">
+            <div class="col-6">
               <a type="submit" href="index.php" class="btn btn-primary btn-block btn-flat">Kembali</a>
+            </div>
+            <div class="col-6">
+              <button class="btn btn-primary btn-block" type="submit" name="regis">Simpan</button>
+            </div>
+            <!-- /.col -->
           </div>
-          <div class="col-6">
-          <button class="btn btn-primary btn-block"  type="submit" name="regis">Simpan</button>
-          </div>
-          <!-- /.col -->
-        </div>
-      </form>
+        </form>
+      </div>
+      <!-- /.login-card-body -->
     </div>
-    <!-- /.login-card-body -->
   </div>
-</div>
-<!-- /.login-box -->
+  <!-- /.login-box -->
 
-<!-- jQuery -->
-<script src="assets/plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- AdminLTE App -->
-<script src="assets/dist/js/adminlte.min.js"></script>
+  <!-- jQuery -->
+  <script src="assets/plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="assets/dist/js/adminlte.min.js"></script>
 
 </body>
+
 </html>

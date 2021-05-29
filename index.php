@@ -1,6 +1,7 @@
 <?php
 $title = "Sona Wisata | Tempat Wisata";
 require 'su/function.php';
+
 $jumdatph = 12;
 $jumalldat = count(data("SELECT * FROM artikel"));
 $jumhal = ceil($jumalldat / $jumdatph);
@@ -55,9 +56,6 @@ if (isset($_POST["cari"])) {
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="buatArtikel.php">Buat Artikel</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="index.html">About</a>
-                    </li>
                 </ul>
             </div>
             <form action="" method="post" class=" pt-1 d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
@@ -81,7 +79,7 @@ if (isset($_POST["cari"])) {
     <header class="masthead" style="height: 900px;">
         <div class="container">
             <div class="intro-text">
-                <div class="intro-lead-in pt-5 mt-5 text-green">Temukan Tempat Liburan Faforit Keluarga Anda</div>
+                <div class="intro-lead-in pt-5 mt-5">Temukan Tempat Liburan Faforit Keluarga Anda</div>
             </div>
         </div>
     </header>
